@@ -96,7 +96,7 @@ export default function TermsPage() {
             <p>
               For enquiries regarding these Terms of Use, please contact Gargi
               Group at our registered address: Plot No. 46/2163/4108, Lane 2,
-              Infront of Utkal Residency, Patrapada, Bhubaneswar, Odisha – 751019, India.
+              Infront of Utpal Residency, Patrapada, Bhubaneswar, Odisha – 751019, India.
             </p>
           </div>
         </div>

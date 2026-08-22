@@ -1,8 +1,13 @@
 // src/app/api/contact/route.ts
-// Contact form handler — validates input server-side and appends to Google Sheets
+// Contact form handler — validates input server-side and forwards to Google Apps Script Web App
+// which appends the submission to Google Sheets.
+//
+// Setup:
+//   1. Paste gargi_apps_script_doPost.js into your Google Apps Script editor
+//   2. Deploy as Web App → Anyone can access
+//   3. Copy the Web App URL into .env.local as GOOGLE_APPS_SCRIPT_URL
 
 import { NextRequest, NextResponse } from "next/server";
-import { google } from "googleapis";
 
 /* ─────────────────────────────────────────────
    Server-side validation helpers
@@ -12,67 +17,46 @@ function isValidEmail(email: string): boolean {
 }
 
 function isValidPhone(phone: string): boolean {
-  // Allows +91 XXXXX XXXXX, 10-digit, or empty
+  // Allows +91 XXXXX XXXXX or plain 10-digit Indian mobile
   return /^(\+91[\s-]?)?[6-9]\d{9}$/.test(phone.replace(/\s/g, ""));
 }
 
 /* ─────────────────────────────────────────────
-   Google Sheets helper
+   Google Apps Script helper
 ───────────────────────────────────────────── */
-async function appendToSheet(data: {
+async function sendToAppsScript(data: {
   name: string;
   email: string;
   phone: string;
   subject: string;
   message: string;
 }) {
-  const email = process.env.GOOGLE_SERVICE_ACCOUNT_EMAIL;
-  const rawKey = process.env.GOOGLE_PRIVATE_KEY;
-  const sheetId = process.env.GOOGLE_SPREADSHEET_ID;
+  const scriptUrl = process.env.GOOGLE_APPS_SCRIPT_URL;
 
-  if (!email || !rawKey || !sheetId) {
+  if (!scriptUrl) {
     console.warn(
-      "[Contact API] Google Sheets env vars not set — skipping sheet write."
+      "[Contact API] GOOGLE_APPS_SCRIPT_URL not set — skipping sheet write."
     );
     return;
   }
 
-  // Vercel / env loaders sometimes escape newlines as literal \n
-  const privateKey = rawKey.replace(/\\n/g, "\n");
-
-  const auth = new google.auth.GoogleAuth({
-    credentials: {
-      client_email: email,
-      private_key: privateKey,
-    },
-    scopes: ["https://www.googleapis.com/auth/spreadsheets"],
+  const res = await fetch(scriptUrl, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(data),
+    // Apps Script redirects — follow them
+    redirect: "follow",
   });
 
-  const sheets = google.sheets({ version: "v4", auth });
+  if (!res.ok) {
+    const text = await res.text();
+    throw new Error(`Apps Script responded with ${res.status}: ${text}`);
+  }
 
-  const timestamp = new Date().toLocaleString("en-IN", {
-    timeZone: "Asia/Kolkata",
-    dateStyle: "short",
-    timeStyle: "medium",
-  });
-
-  await sheets.spreadsheets.values.append({
-    spreadsheetId: sheetId,
-    range: "Sheet1!A:F",
-    valueInputOption: "RAW",
-    requestBody: {
-      values: [
-        [
-          timestamp,
-          data.name.trim(),
-          data.email.trim(),
-          data.phone.trim() || "—",
-          data.subject,
-          data.message.trim(),
-        ],
-      ],
-    },
-  });
+  const result = await res.json();
+  if (!result.success) {
+    throw new Error(`Apps Script error: ${result.error ?? "unknown"}`);
+  }
 }
 
 /* ─────────────────────────────────────────────
@@ -106,8 +90,14 @@ export async function POST(request: NextRequest) {
       return NextResponse.json({ success: false, errors }, { status: 422 });
     }
 
-    // ── Append to Google Sheet ──
-    await appendToSheet({ name, email, phone: phone ?? "", subject, message });
+    // ── Forward to Apps Script → Google Sheet ──
+    await sendToAppsScript({
+      name: String(name).trim(),
+      email: String(email).trim(),
+      phone: String(phone ?? "").trim(),
+      subject: String(subject),
+      message: String(message ?? "").trim(),
+    });
 
     return NextResponse.json({ success: true }, { status: 200 });
   } catch (err) {

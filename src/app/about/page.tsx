@@ -85,7 +85,7 @@ export default function AboutPage() {
                 </p>
                 <p>
                   Gargi Group is headquartered at Plot No. 46/2163/4108, Lane 2,
-                  Infront of Utkal Residency, Patrapada, Bhubaneswar, Odisha – 751019,
+                  Infront of Utpal Residency, Patrapada, Bhubaneswar, Odisha – 751019,
                   and is committed to conducting all activities within the full scope
                   of applicable laws and regulations.
                 </p>
@@ -200,7 +200,7 @@ export default function AboutPage() {
             <address className="not-italic p-5 rounded-xl bg-white border border-[rgba(28,35,48,0.1)] text-sm text-[#374151] leading-relaxed">
               <strong className="text-[#0D1B2A] font-semibold">Gargi Group</strong><br />
               Plot No. 46/2163/4108, Lane 2,<br />
-              Infront of Utkal Residency, Patrapada,<br />
+              Infront of Utpal Residency, Patrapada,<br />
               Bhubaneswar, Odisha – 751019, India
             </address>
           </div>

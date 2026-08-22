@@ -53,14 +53,14 @@ export default function Footer() {
                 <MapPin size={15} className="text-[#C9A84C] mt-0.5 flex-shrink-0" />
                 <address className="not-italic text-xs text-white/60 leading-relaxed">
                   Plot No. 46/2163/4108, Lane 2,<br />
-                  Infront of Utkal Residency,<br />
+                  Infront of Utpal Residency,<br />
                   Patrapada, Bhubaneswar,<br />
                   Odisha – 751019, India
                 </address>
               </div>
               <div className="flex items-center gap-3">
                 <Mail size={15} className="text-[#C9A84C] flex-shrink-0" />
-                <span className="text-xs text-white/60">contact@gargigroup.in <span className="text-white/30">(placeholder)</span></span>
+                <a href="mailto:gargigroup007@gmail.com" className="text-xs text-white/60 hover:text-[#C9A84C] transition-colors">gargigroup007@gmail.com</a>
               </div>
               <div className="flex items-center gap-3">
                 <Phone size={15} className="text-[#C9A84C] flex-shrink-0" />

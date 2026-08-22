@@ -19,7 +19,7 @@ function OrganizationSchema() {
       "Gargi Group is a diversified organization based in Bhubaneswar, Odisha, working across education, skill development, agriculture, hospitality, real estate, finance, community development, empowerment, media and other lawful development initiatives.",
     address: {
       "@type": "PostalAddress",
-      streetAddress: "Plot No. 46/2163/4108, Lane 2, Infront of Utkal Residency, Patrapada",
+      streetAddress: "Plot No. 46/2163/4108, Lane 2, Infront of Utpal Residency, Patrapada",
       addressLocality: "Bhubaneswar",
       addressRegion: "Odisha",
       postalCode: "751019",

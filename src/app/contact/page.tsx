@@ -20,13 +20,13 @@ const contactDetails = [
   {
     icon: MapPin,
     label: "Our Address",
-    value: "Plot No. 46/2163/4108, Lane 2, Infront of Utkal Residency, Patrapada, Bhubaneswar, Odisha – 751019, India",
+    value: "Plot No. 46/2163/4108, Lane 2, Infront of Utpal Residency, Patrapada, Bhubaneswar, Odisha – 751019, India",
     isAddress: true,
   },
   {
     icon: Mail,
     label: "Email",
-    value: "contact@gargigroup.in (placeholder — to be updated)",
+    value: "gargigroup007@gmail.com",
     isAddress: false,
   },
   {
@@ -106,16 +106,18 @@ export default function ContactPage() {
                 })}
               </div>
 
-              {/* Map Placeholder */}
-              <div className="mt-8 map-placeholder rounded-xl" role="img" aria-label="Map placeholder — location of Gargi Group, Patrapada, Bhubaneswar, Odisha">
-                <MapPin size={28} className="text-[#6B7280]" aria-hidden="true" />
-                <div className="text-center">
-                  <p className="font-semibold text-[#0D1B2A] text-sm">Gargi Group</p>
-                  <p className="text-xs text-[#6B7280] mt-1">
-                    Patrapada, Bhubaneswar, Odisha<br />
-                    <span className="text-[#6B7280]/60">(Google Maps to be embedded)</span>
-                  </p>
-                </div>
+              {/* Google Map Embed */}
+              <div className="mt-8 rounded-xl overflow-hidden border border-[rgba(28,35,48,0.1)] shadow-sm h-[280px]">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3743.4164035296917!2d85.7628412742163!3d20.241558214352086!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a19a9d83c925647%3A0x6d0a1e2b166075ff!2sUTPAL%20RESIDENCY!5e0!3m2!1sen!2sin!4v1787310001113!5m2!1sen!2sin"
+                  title="Gargi Group Location — Infront of Utpal Residency, Patrapada, Bhubaneswar"
+                  width="100%"
+                  height="100%"
+                  style={{ border: 0 }}
+                  allowFullScreen
+                  loading="lazy"
+                  referrerPolicy="strict-origin-when-cross-origin"
+                />
               </div>
             </div>
 

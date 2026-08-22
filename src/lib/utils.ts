@@ -18,7 +18,7 @@ export const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://gargigroup.
 export const COMPANY_NAME = "Gargi Group";
 export const COMPANY_TAGLINE = "Building Opportunities. Creating Impact. Shaping Tomorrow.";
 export const COMPANY_ADDRESS =
-  "Plot No. 46/2163/4108, Lane 2, Infront of Utkal Residency, Patrapada, Bhubaneswar, Odisha – 751019, India";
+  "Plot No. 46/2163/4108, Lane 2, Infront of Utpal Residency, Patrapada, Bhubaneswar, Odisha – 751019, India";
 export const COMPANY_CITY = "Bhubaneswar";
 export const COMPANY_STATE = "Odisha";
 export const COMPANY_COUNTRY = "India";
