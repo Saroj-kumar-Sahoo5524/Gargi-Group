@@ -64,7 +64,11 @@ export default function Footer() {
               </div>
               <div className="flex items-center gap-3">
                 <Phone size={15} className="text-[#C9A84C] flex-shrink-0" />
-                <span className="text-xs text-white/60">To be updated</span>
+                <p className="text-xs text-white/60 leading-relaxed">
+                  <a href="tel:06744119037" className="hover:text-[#C9A84C] transition-colors">06744119037</a>
+                  <span className="mx-1.5 text-white/30">/</span>
+                  <a href="tel:7438968674" className="hover:text-[#C9A84C] transition-colors">7438968674</a>
+                </p>
               </div>
             </div>
           </div>

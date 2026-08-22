@@ -32,13 +32,13 @@ const contactDetails = [
   {
     icon: Phone,
     label: "Phone",
-    value: "To be updated following official announcement",
+    value: "06744119037 / 7438968674",
     isAddress: false,
   },
   {
     icon: Clock,
     label: "Business Hours",
-    value: "To be updated following official announcement",
+    value: "Mon – Sun, 10:00 AM – 7:00 PM",
     isAddress: false,
   },
 ];
