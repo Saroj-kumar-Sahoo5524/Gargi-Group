@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { Send, CheckCircle } from "lucide-react";
+import { Send, CheckCircle, AlertCircle, Loader2 } from "lucide-react";
 
 interface CareerFormData {
   name: string;
@@ -9,6 +9,10 @@ interface CareerFormData {
   phone: string;
   area: string;
   message: string;
+}
+
+function isValidEmail(email: string) {
+  return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.trim());
 }
 
 export default function CareerForm() {
@@ -21,6 +25,7 @@ export default function CareerForm() {
   });
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
+  const [serverError, setServerError] = useState("");
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
@@ -30,10 +35,50 @@ export default function CareerForm() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    setServerError("");
+
+    // Basic client-side validation
+    if (!form.name.trim() || form.name.trim().length < 2) {
+      setServerError("Please enter your full name (at least 2 characters).");
+      return;
+    }
+    if (!form.email.trim() || !isValidEmail(form.email)) {
+      setServerError("Please enter a valid email address.");
+      return;
+    }
+    if (!form.message.trim()) {
+      setServerError("Please tell us about yourself.");
+      return;
+    }
+
     setLoading(true);
-    await new Promise((r) => setTimeout(r, 1200));
-    setLoading(false);
-    setSubmitted(true);
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          name: form.name.trim(),
+          email: form.email.trim(),
+          phone: form.phone.trim() || "Not provided",
+          subject: `Careers${form.area ? ` — ${form.area}` : ""}`,
+          message: form.message.trim(),
+        }),
+      });
+
+      const data = await res.json();
+
+      if (res.ok && data.success) {
+        setSubmitted(true);
+      } else {
+        setServerError(
+          data.message || "Something went wrong. Please try again or email us directly."
+        );
+      }
+    } catch {
+      setServerError("Network error — please check your connection and try again.");
+    } finally {
+      setLoading(false);
+    }
   };
 
   if (submitted) {
@@ -53,6 +98,18 @@ export default function CareerForm() {
 
   return (
     <form onSubmit={handleSubmit} noValidate aria-label="Career enquiry form">
+      {/* Server-level error banner */}
+      {serverError && (
+        <div
+          role="alert"
+          className="flex items-start gap-3 p-4 mb-6 rounded-xl text-sm font-medium"
+          style={{ background: "rgba(220,38,38,0.06)", border: "1px solid rgba(220,38,38,0.25)", color: "#DC2626" }}
+        >
+          <AlertCircle size={16} className="flex-shrink-0 mt-0.5" aria-hidden="true" />
+          {serverError}
+        </div>
+      )}
+
       <div className="grid sm:grid-cols-2 gap-5 mb-5">
         <div>
           <label htmlFor="career-name" className="form-label">
@@ -112,14 +169,14 @@ export default function CareerForm() {
             onChange={handleChange}
           >
             <option value="">Select area of interest</option>
-            <option value="Education">Education & Skill Development</option>
+            <option value="Education">Education &amp; Skill Development</option>
             <option value="Agriculture">Agriculture</option>
-            <option value="Hospitality">Service & Hospitality</option>
+            <option value="Hospitality">Service &amp; Hospitality</option>
             <option value="Real Estate">Real Estate</option>
             <option value="Finance">Finance</option>
             <option value="Community Development">Community Development</option>
             <option value="Empowerment">Empowerment</option>
-            <option value="Media">Media & Entertainment</option>
+            <option value="Media">Media &amp; Entertainment</option>
             <option value="Administration">Administration</option>
             <option value="Other">Other</option>
           </select>
@@ -153,7 +210,12 @@ export default function CareerForm() {
         disabled={loading}
         className="btn-primary w-full justify-center disabled:opacity-60 disabled:cursor-not-allowed"
       >
-        {loading ? "Submitting..." : (
+        {loading ? (
+          <>
+            <Loader2 size={16} className="animate-spin" aria-hidden="true" />
+            Submitting…
+          </>
+        ) : (
           <>
             Submit Career Enquiry
             <Send size={15} />
