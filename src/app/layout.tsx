@@ -78,7 +78,7 @@ export default function RootLayout({
     <html lang="en" className="scroll-smooth">
       <head>
         <HomeJsonLd />
-        <link rel="icon" href="/favicon.ico" sizes="any" />
+        <link rel="icon" href="/favicon.png" sizes="any" />
         <meta name="theme-color" content="#0D1B2A" />
         <meta name="geo.region" content="IN-OR" />
         <meta name="geo.placename" content="Bhubaneswar, Odisha" />
