@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
+import Image from "next/image";
 
 export default function AboutSection() {
   return (
@@ -68,7 +69,14 @@ export default function AboutSection() {
                       className="w-20 h-20 rounded-full mx-auto mb-6 flex items-center justify-center"
                       style={{ background: "rgba(201,168,76,0.15)", border: "2px solid rgba(201,168,76,0.3)" }}
                     >
-                      <span className="text-3xl font-bold text-[#C9A84C]" style={{ fontFamily: "Manrope" }}>G</span>
+                      <Image
+                        src="/gargi-logo.png"
+                        alt="Gargi Group Logo"
+                        width={110}
+                        height={110}
+                        className="object-contain"
+                        priority
+                      />
                     </div>
                     <h3 className="text-white font-bold text-2xl mb-3" style={{ fontFamily: "Manrope" }}>
                       Gargi Group
