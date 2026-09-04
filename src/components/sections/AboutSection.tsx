@@ -86,8 +86,10 @@ export default function AboutSection() {
             </div>
 
             {/* Floating stat card — positioned within pb-8 space to avoid clipping */}
-            <div
+            <motion.div
               className="absolute bottom-0 left-0 sm:-bottom-0 sm:-left-5 bg-white rounded-xl p-4 shadow-[0_8px_30px_rgba(13,27,42,0.15)] border border-[rgba(13,27,42,0.08)] z-10"
+              animate={{ y: [0, -10, 0] }}
+              transition={{ duration: 2.8, ease: "easeInOut", repeat: Infinity, repeatType: "loop" }}
             >
               <div className="flex items-center gap-3">
                 <div className="w-10 h-10 rounded-lg flex items-center justify-center" style={{ background: "rgba(13,27,42,0.08)" }}>
@@ -98,7 +100,7 @@ export default function AboutSection() {
                   <p className="text-sm font-bold text-[#0D1B2A]" style={{ fontFamily: "Manrope" }}>10 Areas of Work</p>
                 </div>
               </div>
-            </div>
+            </motion.div>
           </motion.div>
         </div>
       </div>
