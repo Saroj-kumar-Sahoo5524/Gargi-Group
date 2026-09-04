@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { MapPin, Mail, Phone, ArrowUpRight } from "lucide-react";
+import Image from "next/image";
 
 const companyLinks = [
   { label: "About Gargi Group", href: "/about" },
@@ -35,13 +36,14 @@ export default function Footer() {
           {/* Brand Column */}
           <div className="lg:col-span-1">
             <Link href="/" className="inline-flex items-center gap-3 mb-6 group" aria-label="Gargi Group">
-              <div className="flex items-center justify-center w-10 h-10 rounded-lg" style={{ background: "rgba(201,168,76,0.12)", border: "1px solid rgba(201,168,76,0.3)" }}>
-                <span className="font-bold text-lg text-[#C9A84C]" style={{ fontFamily: "Manrope, sans-serif" }}>G</span>
-              </div>
-              <div>
-                <span className="block font-bold text-white text-base tracking-wide" style={{ fontFamily: "Manrope, sans-serif" }}>GARGI GROUP</span>
-                <span className="block text-[0.6rem] tracking-[0.15em] uppercase text-[rgba(201,168,76,0.7)]">Bhubaneswar, Odisha</span>
-              </div>
+              <Image
+                src="/gargi-logo.png"
+                alt="Gargi Group Logo"
+                width={110}
+                height={110}
+                className="object-contain"
+                priority
+              />
             </Link>
             <p className="text-sm text-white/60 leading-relaxed mb-6">
               A diversified organization committed to creating sustainable opportunities across business, development, livelihoods and community advancement.

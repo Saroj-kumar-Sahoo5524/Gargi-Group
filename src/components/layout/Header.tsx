@@ -5,6 +5,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Menu, X, ChevronDown, ArrowRight } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
+import Image from "next/image";
 
 const navLinks = [
   { label: "Home", href: "/" },
@@ -66,45 +67,27 @@ export default function Header() {
   return (
     <>
       <header
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-400 ${
-          isTransparent
-            ? "bg-transparent"
-            : "bg-white shadow-[0_2px_20px_rgba(13,27,42,0.08)] border-b border-[rgba(13,27,42,0.06)]"
-        }`}
+        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-400 ${isTransparent
+          ? "bg-transparent"
+          : "bg-white shadow-[0_2px_20px_rgba(13,27,42,0.08)] border-b border-[rgba(13,27,42,0.06)]"
+          }`}
         style={{ transition: "background 0.35s ease, box-shadow 0.35s ease" }}
       >
         <div className="container-site">
-          <div className="flex items-center justify-between h-20">
+          <div className="flex items-center justify-between h-30">
             {/* Logo */}
             <Link href="/" className="flex items-center gap-3 group" aria-label="Gargi Group Home">
-              <div
-                className="flex items-center justify-center w-10 h-10 rounded-lg"
-                style={{ background: isTransparent ? "rgba(255,255,255,0.15)" : "#0D1B2A" }}
-              >
-                <span
-                  className="font-bold text-lg leading-none"
-                  style={{ color: isTransparent ? "#C9A84C" : "#C9A84C", fontFamily: "Manrope, sans-serif" }}
-                >
-                  G
-                </span>
-              </div>
-              <div>
-                <span
-                  className="block font-bold text-base leading-none tracking-wide transition-colors"
-                  style={{
-                    fontFamily: "Manrope, sans-serif",
-                    color: isTransparent ? "#fff" : "#0D1B2A",
-                  }}
-                >
-                  GARGI GROUP
-                </span>
-                <span
-                  className="block text-[0.6rem] tracking-[0.15em] uppercase mt-0.5"
-                  style={{ color: isTransparent ? "rgba(201,168,76,0.8)" : "#6B7280" }}
-                >
-                  Bhubaneswar, Odisha
-                </span>
-              </div>
+
+              <Image
+                src="/gargi-logo.png"
+                alt="Gargi Group Logo"
+                width={110}
+                height={110}
+                className="object-contain"
+                priority
+              />
+
+
             </Link>
 
             {/* Desktop Nav */}
@@ -118,11 +101,10 @@ export default function Header() {
                     onMouseLeave={() => setAreasOpen(false)}
                   >
                     <button
-                      className={`flex items-center gap-1.5 font-medium text-sm transition-colors ${
-                        isTransparent
-                          ? "text-white/85 hover:text-white"
-                          : "text-[#1C2330] hover:text-[#0D1B2A]"
-                      }`}
+                      className={`flex items-center gap-1.5 font-medium text-sm transition-colors ${isTransparent
+                        ? "text-white/85 hover:text-white"
+                        : "text-[#1C2330] hover:text-[#0D1B2A]"
+                        }`}
                       aria-expanded={areasOpen}
                       aria-haspopup="true"
                     >
@@ -167,17 +149,15 @@ export default function Header() {
                   <Link
                     key={link.href}
                     href={link.href}
-                    className={`font-medium text-sm transition-colors relative group ${
-                      isTransparent
-                        ? "text-white/85 hover:text-white"
-                        : "text-[#1C2330] hover:text-[#0D1B2A]"
-                    } ${pathname === link.href ? (isTransparent ? "text-white" : "text-[#0D1B2A]") : ""}`}
+                    className={`font-medium text-sm transition-colors relative group ${isTransparent
+                      ? "text-white/85 hover:text-white"
+                      : "text-[#1C2330] hover:text-[#0D1B2A]"
+                      } ${pathname === link.href ? (isTransparent ? "text-white" : "text-[#0D1B2A]") : ""}`}
                   >
                     {link.label}
                     <span
-                      className={`absolute -bottom-1 left-0 h-0.5 bg-[#C9A84C] transition-all duration-250 ${
-                        pathname === link.href ? "w-full" : "w-0 group-hover:w-full"
-                      }`}
+                      className={`absolute -bottom-1 left-0 h-0.5 bg-[#C9A84C] transition-all duration-250 ${pathname === link.href ? "w-full" : "w-0 group-hover:w-full"
+                        }`}
                     />
                   </Link>
                 )
@@ -281,11 +261,10 @@ export default function Header() {
                     <Link
                       key={link.href}
                       href={link.href}
-                      className={`flex items-center px-4 py-3 text-sm font-medium rounded-xl transition-colors ${
-                        pathname === link.href
-                          ? "text-[#0D1B2A] bg-[rgba(13,27,42,0.07)]"
-                          : "text-[#1C2330] hover:text-[#0D1B2A] hover:bg-[rgba(13,27,42,0.05)]"
-                      }`}
+                      className={`flex items-center px-4 py-3 text-sm font-medium rounded-xl transition-colors ${pathname === link.href
+                        ? "text-[#0D1B2A] bg-[rgba(13,27,42,0.07)]"
+                        : "text-[#1C2330] hover:text-[#0D1B2A] hover:bg-[rgba(13,27,42,0.05)]"
+                        }`}
                     >
                       {link.label}
                     </Link>

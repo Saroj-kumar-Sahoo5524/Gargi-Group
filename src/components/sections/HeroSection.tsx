@@ -14,7 +14,7 @@ export default function HeroSection() {
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <Image
-          src="https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1920&q=85"
+          src="/temple.png"
           alt="Bhubaneswar Odisha skyline representing modern development and growth"
           fill
           priority
@@ -63,9 +63,7 @@ export default function HeroSection() {
             transition={{ duration: 0.7, delay: 0.2 }}
             className="text-xl text-white/75 max-w-2xl leading-relaxed mb-10"
           >
-            Gargi Group is a diversified organization committed to creating
-            sustainable opportunities across business, development, livelihoods
-            and community advancement.
+            Gargi Group is a diversified business group rooted in real estate, with ten additional sectors spanning agriculture, finance, education, hospitality and media. Based in Bhubaneswar, the group is building businesses across Odisha with a long-term focus on responsible growth and lasting value with a strong Governance.
           </motion.p>
 
           {/* CTAs */}

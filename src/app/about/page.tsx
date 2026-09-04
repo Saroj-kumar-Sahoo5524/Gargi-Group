@@ -4,6 +4,7 @@ import { ArrowRight, Target, Eye, Heart, Layers, Shield, Leaf } from "lucide-rea
 import { SITE_URL } from "@/lib/utils";
 import Breadcrumb from "@/components/ui/Breadcrumb";
 import CTASection from "@/components/sections/CTASection";
+import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "About Gargi Group | Diversified Organization in Bhubaneswar, Odisha",
@@ -70,18 +71,13 @@ export default function AboutPage() {
               <div className="gold-divider mb-8" />
               <div className="space-y-5 text-[#374151] leading-relaxed">
                 <p>
-                  Gargi Group is a diversified organization based at Patrapada, Bhubaneswar,
-                  in the state of Odisha, India. The Group operates across ten distinct
-                  areas of work — spanning education, agriculture, service and hospitality,
-                  real estate, finance, petrochemical development, community welfare,
-                  women and youth empowerment, charitable initiatives, and media and entertainment.
+                  Gargi Group started with a simple belief as real development doesn't happen in one lane. It happens when education, agriculture, hospitality, real estate, finance, community welfare, and a handful of other sectors all move forward together.
                 </p>
                 <p>
-                  This breadth is not accidental. Gargi Group believes that sustainable
-                  development requires engaging with the multiple dimensions of economic
-                  and social life simultaneously. By operating across diverse sectors,
-                  the Group builds resilience, creates diverse opportunities and contributes
-                  to the broader advancement of communities and the economy.
+                  That's why we work across ten different areas instead of one. Not because we're trying to do everything, but because we think the problems worth solving in Odisha rarely have a single sector solution. A community needs schools and jobs and housing and a reason to believe things are getting better and not just one of those.
+                </p>
+                <p>
+                  we operate the way we'd want a neighbor to operate: within the law, for the long term, and with the understanding that trust is built slowly through the decisions we make, the work we deliver and the way we show up over time. And once earned, it has to be protected.
                 </p>
                 <p>
                   Gargi Group is headquartered at Plot No. 46/2163/4108, Lane 2,
@@ -96,13 +92,15 @@ export default function AboutPage() {
               className="p-8 lg:p-10 rounded-2xl"
               style={{ background: "linear-gradient(135deg, #0D1B2A, #1A2E44)" }}
             >
-              <div
-                className="w-16 h-16 rounded-2xl mb-6 flex items-center justify-center"
-                style={{ background: "rgba(201,168,76,0.15)", border: "1px solid rgba(201,168,76,0.3)" }}
-              >
-                <span className="text-3xl font-bold text-[#C9A84C]" style={{ fontFamily: "Manrope" }}>G</span>
-              </div>
-              <h3 className="text-white font-bold text-2xl mb-2" style={{ fontFamily: "Manrope" }}>Gargi Group</h3>
+
+              <Image
+                src="/gargi-logo.png"
+                alt="Gargi Group Logo"
+                width={200}
+                height={200}
+                className="object-contain"
+                priority
+              />
               <p className="text-[#C9A84C] text-sm tracking-wide uppercase mb-6">Bhubaneswar · Odisha · India</p>
               <div className="h-px w-full mb-6" style={{ background: "rgba(201,168,76,0.2)" }} />
               <div className="space-y-3">
