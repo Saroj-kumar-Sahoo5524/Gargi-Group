@@ -64,19 +64,12 @@ export default function WhyGargi() {
               className="text-[#0D1B2A] mb-6"
               style={{ fontFamily: "Manrope, sans-serif" }}
             >
-              Grounded in Values. Driven by Purpose.
+              Diverse Businesses. Common Standards.
             </h2>
             <div className="gold-divider mb-8" />
             <p className="text-[#374151] leading-relaxed mb-5">
-              What distinguishes Gargi Group is not simply the breadth of its areas
-              of work, but the values and philosophy that underpin every initiative
-              and decision.
+              Diversification across sectors; professional governance; strong local understanding; responsible long-term growth; adaptable thinking; and integrity in business relationships.
             </p>
-            <p className="text-[#374151] leading-relaxed">
-              We are guided by a clear set of principles that keep us accountable
-              to communities, environments and the future.
-            </p>
-
             {/* Decorative element */}
             <div className="mt-12 p-6 rounded-2xl" style={{ background: "linear-gradient(135deg, #0D1B2A, #1A2E44)" }}>
               <p className="text-white/80 text-sm leading-relaxed italic">

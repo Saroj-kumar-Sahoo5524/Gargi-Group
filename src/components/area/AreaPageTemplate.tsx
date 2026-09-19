@@ -79,12 +79,6 @@ export default function AreaPageTemplate({ area }: AreaPageTemplateProps) {
               <p className="text-[#374151] leading-relaxed text-lg mb-6">
                 {area.longDescription}
               </p>
-              <p className="text-[#374151] leading-relaxed">
-                Gargi Group is committed to exploring and developing this area
-                in alignment with our core values of responsibility, sustainability
-                and community focus. All activities and initiatives within this
-                sector are pursued within applicable legal frameworks.
-              </p>
             </div>
 
             {/* Sidebar Icon */}

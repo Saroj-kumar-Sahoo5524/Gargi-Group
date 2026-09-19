@@ -44,11 +44,11 @@ export const areas: AreaData[] = [
     number: "01",
     title: "Education & Skill Development",
     shortTitle: "Education",
-    tagline: "Empowering Minds. Building Futures.",
+    tagline: "Building skills. Creating opportunities.",
     description:
       "Fostering knowledge, vocational learning and employability through education and skill development initiatives across Odisha.",
     longDescription:
-      "Education and skill development are foundational pillars of sustainable progress. Gargi Group recognises that access to quality learning and practical skills can transform individual lives and communities alike. Our focus spans foundational education support, vocational training, capacity building and employability-oriented programmes designed to create meaningful opportunities for learners at all stages.",
+      "Gargi Group explores opportunities in education and skill development with a focus on learning, vocational training, employability and capacity building. Our objective is to support initiatives that strengthen practical skills, improve access to learning and create meaningful opportunities for individuals and communities. All activities are undertaken in accordance with applicable laws and regulatory requirements.",
     iconName: "GraduationCap",
     color: "#1D524D",
     heroImage:
@@ -62,7 +62,7 @@ export const areas: AreaData[] = [
       "Training and certification facilitation",
     ],
     approach:
-      "Our approach to education and skill development is practical, inclusive and community-centred. We aim to identify gaps in educational access and skill availability and work towards bridging them through structured initiatives, partnerships and focused programmes.",
+      "We seek to develop and support education and skill initiatives that respond to changing industry requirements and community needs. Our approach focuses on practical learning, employable skills, partnerships and long-term capacity building.",
     objectives: [
       "Support access to quality education and learning resources",
       "Develop vocational and technical skill pathways",

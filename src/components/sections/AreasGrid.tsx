@@ -19,13 +19,13 @@ export default function AreasGrid({ areas }: AreasGridProps) {
       <div className="container-site">
         {/* Header */}
         <div className="max-w-2xl mb-14">
-          <div className="section-label mb-5">Our Areas of Work</div>
+          <div className="section-label mb-5">Areas of Work</div>
           <h2
             id="areas-heading"
             className="text-[#0D1B2A] mb-4"
             style={{ fontFamily: "Manrope, sans-serif" }}
           >
-            Ten Sectors. One Vision.
+            Ten Areas . One Integrated Vision.
           </h2>
           <div className="gold-divider mb-6" />
           <p className="text-[#374151] leading-relaxed">

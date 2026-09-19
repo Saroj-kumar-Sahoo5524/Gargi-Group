@@ -36,15 +36,13 @@ export default function AreasPage() {
           <Breadcrumb items={[{ label: "Areas of Work" }]} variant="dark" />
           <div className="mt-8 max-w-3xl">
             <div className="section-label-dark mb-4">
-              Ten Sectors · One Group
+              Ten Areas · One Integrated Vision
             </div>
             <h1 className="text-white font-bold mb-4" style={{ fontFamily: "Manrope" }}>
-              Our Areas of Work
+              Areas of Work
             </h1>
             <p className="text-white/70 text-xl leading-relaxed">
-              Gargi Group is a diversified organization operating across ten distinct
-              sectors — each aligned with our vision of responsible growth, community
-              development and long-term opportunity creation.
+              Gargi Group explores opportunities across diverse sectors while maintaining a common focus on responsible business development and long-term value creation.
             </p>
           </div>
         </div>
