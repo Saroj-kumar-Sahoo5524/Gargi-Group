@@ -51,9 +51,9 @@ export default function HeroSection() {
             className="text-white font-bold leading-tight mb-6"
             style={{ fontFamily: "Manrope, sans-serif", letterSpacing: "-0.02em" }}
           >
-            Building Opportunities.{" "}
-            <span style={{ color: "#C9A84C" }}>Creating Value.</span>{" "}
-            Shaping Tomorrow.
+            {"Building Opportunities."}{" "}
+            <span style={{ color: "#C9A84C" }}>Creating Value.</span>{" "} <br></br>
+            {"Shaping Tomorrow."}
           </motion.h1>
 
           {/* Subtext */}
