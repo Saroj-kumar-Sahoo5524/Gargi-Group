@@ -16,7 +16,7 @@ export function formatDate(date: string | Date): string {
 
 export const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://gargigroup.in";
 export const COMPANY_NAME = "Gargi Group";
-export const COMPANY_TAGLINE = "Building Opportunities. Creating Impact. Shaping Tomorrow.";
+export const COMPANY_TAGLINE = "Building Opportunities. Creating Value. Shaping Tomorrow.";
 export const COMPANY_ADDRESS =
   "Plot No. 46/2163/4108, Lane 2, Infront of Utpal Residency, Patrapada, Bhubaneswar, Odisha – 751019, India";
 export const COMPANY_CITY = "Bhubaneswar";

@@ -52,7 +52,7 @@ export default function HeroSection() {
             style={{ fontFamily: "Manrope, sans-serif", letterSpacing: "-0.02em" }}
           >
             Building Opportunities.{" "}
-            <span style={{ color: "#C9A84C" }}>Creating Impact.</span>{" "}
+            <span style={{ color: "#C9A84C" }}>Creating Value.</span>{" "}
             Shaping Tomorrow.
           </motion.h1>
 
