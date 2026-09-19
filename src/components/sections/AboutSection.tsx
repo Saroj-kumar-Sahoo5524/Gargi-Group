@@ -27,18 +27,13 @@ export default function AboutSection() {
             </h2>
             <div className="gold-divider mb-8" />
             <p className="text-[#374151] leading-relaxed mb-5">
-              Gargi Group is a diversified organization based in Bhubaneswar, Odisha,
-              with a broad focus spanning education, agriculture, hospitality, real estate,
-              finance, community development, empowerment and media.
+              Gargi Group is a Bhubaneswar-based diversified business group working across multiple sectors with a focus on responsible growth and long-term value creation.
             </p>
             <p className="text-[#374151] leading-relaxed mb-5">
-              Guided by values of responsibility, community focus and long-term vision,
-              Gargi Group seeks to create meaningful opportunities — for individuals,
-              communities and the broader economy of Odisha and India.
+              Our interests include real estate, education, agriculture, finance, hospitality, industrial development, community initiatives, empowerment and media.
             </p>
             <p className="text-[#374151] leading-relaxed mb-10">
-              Our approach is built on integrity, sustainable thinking and a genuine
-              belief that responsible development creates lasting, shared value.
+              We aim to build businesses that are credible, adaptable and capable of creating lasting value.
             </p>
             <Link href="/about" className="btn-secondary inline-flex" id="about-discover-cta">
               Discover Our Story
