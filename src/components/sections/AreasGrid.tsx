@@ -29,9 +29,7 @@ export default function AreasGrid({ areas }: AreasGridProps) {
           </h2>
           <div className="gold-divider mb-6" />
           <p className="text-[#374151] leading-relaxed">
-            Gargi Group operates across ten distinct areas of work, united by a
-            common commitment to responsible development, community advancement
-            and long-term opportunity creation.
+            Gargi Group explores opportunities across diverse sectors while maintaining a common focus on responsible business development and long-term value creation.
           </p>
         </div>
 
