@@ -207,7 +207,7 @@ export default function AreaPageTemplate({ area }: AreaPageTemplateProps) {
       </section>
 
       {/* Potential Initiatives */}
-      <section
+      {/* <section
         className="section-padding"
         style={{ background: "#F5F6F7" }}
         aria-labelledby="initiatives-heading"
@@ -257,7 +257,7 @@ export default function AreaPageTemplate({ area }: AreaPageTemplateProps) {
             </Link>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Related Areas */}
       {relatedAreas.length > 0 && (
