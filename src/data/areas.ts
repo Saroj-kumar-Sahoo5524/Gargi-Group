@@ -140,27 +140,27 @@ export const areas: AreaData[] = [
     description:
       "Developing service excellence, hospitality operations and tourism-related opportunities in Odisha and beyond.",
     longDescription:
-      "The service and hospitality sector represents a significant area of economic opportunity and employment generation. Gargi Group looks to contribute to the growth of this sector through initiatives focused on service quality, hospitality operations, guest experience and tourism-related development. Odisha's rich cultural heritage, natural landscapes and tourism potential provide an inspiring backdrop for meaningful growth in this space.",
+      "Gargi Group explores opportunities in service and hospitality with a focus on service quality, operational standards, guest experience and tourism related development. Our interest includes initiatives that respond to evolving customer expectations and the wider hospitality and tourism ecosystem.",
     iconName: "Hotel",
     color: "#688882",
     heroImage:
       "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1600&q=80",
     keyFocusAreas: [
-      "Service excellence and hospitality standards",
-      "Guest experience and operations",
-      "Tourism-related development opportunities",
-      "Hospitality sector skill development",
-      "Service-sector capacity building",
-      "Cultural and heritage tourism support",
+      "Hospitality Operations",
+      "Guest Experience",
+      "Service Excellence",
+      "Tourism Development",
+      "Hospitality Skill Development",
+      "Cultural & Heritage Tourism",
     ],
     approach:
-      "Our hospitality approach centres on service excellence, with an understanding that great experiences are built on well-trained teams, thoughtful operations and genuine commitment to guests and communities. We explore opportunities aligned with Odisha's unique cultural and tourism potential.",
+      "We believe quality hospitality depends on capable teams, efficient operations and a strong understanding of guest and community needs.",
     objectives: [
-      "Develop service and hospitality standards",
-      "Support tourism-sector growth in Odisha",
-      "Build capacity within the hospitality workforce",
-      "Explore guest experience and operations opportunities",
-      "Contribute to Odisha's tourism and cultural economy",
+      "Develop quality service standards",
+      "Support hospitality sector opportunities",
+      "Strengthen workforce capabilities",
+      "Explore tourism related initiatives",
+      "Create meaningful customer experiences",
     ],
     relatedAreas: ["education", "real-estate", "media-entertainment"],
     seo: {
