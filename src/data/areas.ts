@@ -186,27 +186,27 @@ export const areas: AreaData[] = [
     description:
       "Exploring responsible property development, residential planning and infrastructure opportunities in Bhubaneswar and Odisha.",
     longDescription:
-      "Real estate and property development offer significant opportunities to contribute to Odisha's growing urban and rural landscapes. Gargi Group is interested in exploring responsible, community-oriented property development that prioritises quality, planning and sustainable outcomes. Our focus is on understanding the potential of land development, residential planning and infrastructure within the framework of applicable laws and regulations.",
+      "Real estate is an important area of Gargi Group's business interests. We explore opportunities in property development, residential planning, commercial development and related infrastructure. Our approach combines practical planning, regulatory compliance and long-term value creation.",
     iconName: "Building2",
     color: "#1D524D",
     heroImage:
       "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1600&q=80",
     keyFocusAreas: [
-      "Property and land development exploration",
-      "Residential planning and development",
-      "Community-oriented infrastructure",
-      "Sustainable development practices",
-      "Urban and peri-urban opportunities",
-      "Responsible land use and planning",
+      "Property Development",
+      "Residential Development",
+      "Commercial Development",
+      "Land & Infrastructure",
+      "Urban & Peri-Urban Opportunities",
+      "Responsible Land Use",
     ],
     approach:
-      "We approach real estate and property development with a long-term perspective, emphasising responsible planning, community alignment and compliance with applicable regulations. Our interest is in creating spaces that add lasting value to communities and environments. All development activities are undertaken in accordance with applicable laws and statutory requirements.",
+      "We approach real estate with a focus on sound planning, quality development, regulatory compliance and sustainable value creation.",
     objectives: [
-      "Explore responsible property development opportunities",
-      "Support residential and community infrastructure",
-      "Apply sustainable planning principles",
-      "Operate within all applicable legal frameworks",
-      "Create long-term value through quality development",
+      "Develop commercially viable projects",
+      "Promote responsible land use",
+      "Support residential and commercial development",
+      "Maintain applicable statutory standards",
+      "Create long-term value through quality projects",
     ],
     relatedAreas: ["finance", "hospitality", "community-development"],
     seo: {
