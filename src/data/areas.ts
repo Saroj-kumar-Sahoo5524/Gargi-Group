@@ -94,7 +94,7 @@ export const areas: AreaData[] = [
     description:
       "Supporting agricultural development, rural opportunities and sustainable farming practices across Odisha and allied regions.",
     longDescription:
-      "Agriculture remains a vital sector for livelihoods, food security and rural development across Odisha. Gargi Group is committed to exploring opportunities within agriculture and allied activities that support farmers, rural communities and sustainable value chains. Our focus extends to allied sectors such as agri-processing, rural infrastructure support and farmer-oriented development initiatives.",
+      "Gargi Group explores opportunities in agriculture and allied activities with a focus on sustainable practices, rural livelihoods and agricultural value chain development. Our objective is to support initiatives that contribute to productive agriculture, rural opportunity and responsible development. All activities are undertaken in accordance with applicable laws and regulatory requirements.",
     iconName: "Sprout",
     color: "#2a7055",
     heroImage:
@@ -108,13 +108,13 @@ export const areas: AreaData[] = [
       "Farmer-oriented initiatives and support",
     ],
     approach:
-      "We approach agricultural development with a community-first mindset, recognising the importance of sustainable practices, rural livelihoods and the potential of Odisha's agricultural landscape. Our initiatives are designed to add value at multiple stages of the agricultural cycle.",
+      "We seek to identify opportunities across the agricultural value chain while considering local needs, sustainability and long-term economic value.",
     objectives: [
       "Support sustainable agricultural practices",
       "Create rural livelihood opportunities",
-      "Develop agricultural value chains",
-      "Promote farmer welfare and rural development",
-      "Explore allied agri-sector opportunities",
+      "Explore agricultural value chain development",
+      "Encourage responsible use of resources",
+      "Support opportunities in allied agricultural activities",
     ],
     relatedAreas: ["community-development", "empowerment", "charitable-development"],
     seo: {
