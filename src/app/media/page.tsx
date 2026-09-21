@@ -57,8 +57,7 @@ export default function MediaPage() {
               <span style={{ color: "#C9A84C" }}>In Every Frame</span>
             </h1>
             <p className="text-white/65 text-lg leading-relaxed max-w-2xl">
-              Browse videos and photo galleries across all ten areas of Gargi Group&apos;s work.
-              Select any area below to explore its dedicated media collection.
+              Explore company activities, announcements, project developments and selected visual content across our areas of work.
             </p>
           </div>
 

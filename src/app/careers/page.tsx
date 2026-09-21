@@ -57,8 +57,7 @@ export default function CareersPage() {
               Careers at Gargi Group
             </h1>
             <p className="text-white/70 text-xl leading-relaxed">
-              Be part of a growing, purposeful organization working across
-              ten areas of development in Odisha and beyond.
+              We welcome individuals who bring professionalism, initiative, integrity and a willingness to learn. As Gargi Group develops across multiple sectors, we aim to build teams capable of taking ownership, solving problems and contributing to long-term growth.
             </p>
           </div>
         </div>
