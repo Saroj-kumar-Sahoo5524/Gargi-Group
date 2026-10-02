@@ -96,7 +96,7 @@ export default function ProjectsPage() {
               className="text-[#0D1B2A] mb-4"
               style={{ fontFamily: "Manrope" }}
             >
-              Coming Soon
+              Upcoming Projects
             </h2>
             <p className="text-[#6B7280] text-lg leading-relaxed">
               Gargi Group is actively developing the following initiatives.
@@ -213,7 +213,7 @@ export default function ProjectsPage() {
                   {/* Description */}
                   <p
                     className="text-[#374151] leading-relaxed mb-8"
-                    style={{ fontSize: "1rem", maxWidth: "860px" }}
+                    style={{ fontSize: "1rem", maxWidth: "860px", textAlign: "justify" }}
                   >
                     {project.description}
                   </p>
