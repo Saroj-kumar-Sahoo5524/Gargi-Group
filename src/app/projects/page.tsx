@@ -230,7 +230,7 @@ export default function ProjectsPage() {
                   />
 
                   {/* Footer row */}
-                  <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+                  {/* <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
                     <div className="flex items-center gap-2 text-sm text-[#6B7280]">
                       <MapPin size={15} className="text-[#C9A84C]" aria-hidden="true" />
                       <span>{project.location}</span>
@@ -244,7 +244,7 @@ export default function ProjectsPage() {
                       Enquire About This Project
                       <ArrowRight size={15} />
                     </Link>
-                  </div>
+                  </div> */}
                 </div>
               </article>
             ))}
