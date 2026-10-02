@@ -268,27 +268,30 @@ export default function ProjectsPage() {
           </h3>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {[
-              "Education & Skill Development",
-              "Agriculture & Allied Activities",
-              "Service & Hospitality",
-              "Real Estate & Property Development",
-              "Finance & Financial Services",
-              "Petrochemical Development Initiatives",
-              "Community Welfare & Livelihood",
-              "Women, Youth & Community Empowerment",
-              "Charitable & Development Initiatives",
-              "Media & Entertainment",
-            ].map((sector, i) => (
-              <div
-                key={i}
-                className="flex items-center gap-3 p-4 rounded-xl border border-[rgba(28,35,48,0.1)] bg-white"
+              { label: "Education & Skill Development",        slug: "education" },
+              { label: "Agriculture & Allied Activities",       slug: "agriculture" },
+              { label: "Service & Hospitality",                slug: "hospitality" },
+              { label: "Real Estate & Property Development",   slug: "real-estate" },
+              { label: "Finance & Financial Services",         slug: "finance" },
+              { label: "Petrochemical Development Initiatives",slug: "petrochemical" },
+              { label: "Community Welfare & Livelihood",       slug: "community-development" },
+              { label: "Women, Youth & Community Empowerment", slug: "empowerment" },
+              { label: "Charitable & Development Initiatives", slug: "charitable-development" },
+              { label: "Media & Entertainment",                slug: "media-entertainment" },
+            ].map(({ label, slug }) => (
+              <Link
+                key={slug}
+                href={`/media/${slug}`}
+                id={`sector-link-${slug}`}
+                className="sector-card-link"
               >
                 <div
                   className="w-2 h-2 rounded-full bg-[#C9A84C] flex-shrink-0"
                   aria-hidden="true"
                 />
-                <span className="text-sm text-[#374151]">{sector}</span>
-              </div>
+                <span className="sector-card-label">{label}</span>
+                <ArrowRight size={13} className="sector-card-arrow" aria-hidden="true" />
+              </Link>
             ))}
           </div>
         </div>
